@@ -1,4 +1,4 @@
-# <div align="center" size="48px"><img src="./src/app/favicon.ico" alt="SoftSell Logo" width="58"/> SoftSell</div>
+# <div align="center" size="48px"><img src="./src/app/favicon.ico" alt="TestSite Logo" width="58"/> TestSite</div>
 <div align="center">
 <p>The premier marketplace for software license resale</p>
 
@@ -8,14 +8,14 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC.svg)](https://tailwindcss.com/)
 </div>
 <p align="center">
-  <img src="./public/dark.png" width="45%" alt="SoftSell Dark Theme">
+  <img src="./public/dark.png" width="45%" alt="TestSite Dark Theme">
   &nbsp; &nbsp; &nbsp;
-  <img src="./public/light.png" width="45%" alt="SoftSell Light Theme">
+  <img src="./public/light.png" width="45%" alt="TestSite Light Theme">
 </p>
 
 ## 🌟 Overview
 
-SoftSell is a cutting-edge SaaS platform designed to help users securely sell their unused software licenses. With a sleek UI, intuitive flow, and AI-powered assistance, SoftSell offers a seamless experience for license valuation and selling.
+TestSite is a cutting-edge SaaS platform designed to help users securely sell their unused software licenses. With a sleek UI, intuitive flow, and AI-powered assistance, TestSite offers a seamless experience for license valuation and selling.
 
 Visit our platform: [https://soft-sell-dakshrana-projects.vercel.app/](https://soft-sell-dakshrana-projects.vercel.app/)
 
@@ -23,7 +23,6 @@ Visit our platform: [https://soft-sell-dakshrana-projects.vercel.app/](https://s
 
 - 🔐 **Secure License Uploads** - Safely upload your unused software licenses
 - 💰 **Instant Valuations** - Get real-time market-based valuations
-- 🤖 **AI Chat Assistant** - Powered by Google's Gemini AI model
 - 🌓 **Dark/Light Theme** - Beautiful interface in both modes
 - 🔄 **Interactive UI Elements** - Motion animations and tilt effects
 - 📱 **Fully Responsive** - Optimized for all devices
@@ -59,7 +58,7 @@ The implementation leverages the Vercel AI SDK and Google's Gemini API to render
 
 ## 📐 Architecture
 
-SoftSell follows a modern web architecture:
+TestSite follows a modern web architecture:
 
 - **App Router** - Next.js app directory structure
 - **Server Components** - For improved performance and SEO
@@ -78,11 +77,11 @@ SoftSell follows a modern web architecture:
 
 ## 📄 License
 
-Copyright © 2025 SoftSell. All rights reserved.
+Copyright © 2025 TestSite. All rights reserved.
 
 ---
 
 <p align="center">
-  <a href="https://soft-sell-dakshrana-projects.vercel.app/">Visit SoftSell</a> •
-  <a href="mailto:contact@softsell.example.com">Contact</a> •
+  <a href="https://soft-sell-dakshrana-projects.vercel.app/">Visit TestSite</a> •
+  <a href="mailto:contact@testsite.example.com">Contact</a> •
 </p>
