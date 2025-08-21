@@ -14,14 +14,13 @@ import { cn } from "@/lib/utils";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import {
   BookOpen,
-  ChevronDown,
   DollarSign,
   LifeBuoy,
   Menu,
   ShieldCheck,
   Users,
   X,
-  Zap,
+  Zap
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";

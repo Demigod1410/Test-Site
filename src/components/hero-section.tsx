@@ -6,7 +6,6 @@ import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
 export function HeroSection() {
-  const [activeTab, setActiveTab] = useState("sell");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
