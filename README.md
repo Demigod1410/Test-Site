@@ -7,11 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6.svg)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC.svg)](https://tailwindcss.com/)
 </div>
-<p align="center">
-  <img src="./public/dark.png" width="45%" alt="TestSite Dark Theme">
-  &nbsp; &nbsp; &nbsp;
-  <img src="./public/light.png" width="45%" alt="TestSite Light Theme">
-</p>
+
 
 ## 🌟 Overview
 
