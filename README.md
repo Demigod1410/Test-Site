@@ -13,7 +13,7 @@
 
 TestSite is a cutting-edge SaaS platform designed to help users securely sell their unused software licenses. With a sleek UI, intuitive flow, and AI-powered assistance, TestSite offers a seamless experience for license valuation and selling.
 
-Visit our platform: [https://soft-sell-dakshrana-projects.vercel.app/](https://soft-sell-dakshrana-projects.vercel.app/)
+Visit our platform: [https://test-site-psi-blond.vercel.app/](https://test-site-psi-blond.vercel.app/)
 
 ## ✨ Key Features
 

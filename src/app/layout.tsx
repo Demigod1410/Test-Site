@@ -9,9 +9,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "SoftSell - Turn Unused Software into Real Value",
+  title: "TestSite",
   description:
-    "With SoftSell, resell unused software licenses instantly and securely.",
+    "TestSite template",
   keywords: [
     "software license",
     "license resale",
