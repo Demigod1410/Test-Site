@@ -14,14 +14,14 @@ const testimonials = [
 		role: "IT Director",
 		company: "TechCorp Solutions",
 		content:
-			"SoftSell made it incredibly easy to recover value from our unused enterprise licenses. The process was smooth and secure.",
+			"TestSite made it incredibly easy to recover value from our unused enterprise licenses. The process was smooth and secure.",
 	},
 	{
 		name: "Michael Rodriguez",
 		role: "Operations Manager",
 		company: "Innovate Systems",
 		content:
-			"We've saved thousands by selling our unused licenses through SoftSell. Their valuation system is transparent and fair.",
+			"We've saved thousands by selling our unused licenses through TestSite. Their valuation system is transparent and fair.",
 	},
 	{
 		name: "Emily Watson",
