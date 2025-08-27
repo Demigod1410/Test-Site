@@ -19,20 +19,20 @@ import VanillaTilt from "vanilla-tilt";
 
 const steps = [
   {
-    title: "Upload License",
+    title: "Our Mission",
     description:
-      "Securely upload your unused software license details to our platform.",
+      "We're dedicated to delivering exceptional solutions that exceed our clients' expectations and drive innovation in our industry.",
     icon: UploadIcon,
   },
   {
-    title: "Get Free Valuation",
-    description: "Receive an instant, market-based valuation for your license.",
+    title: "Our Values",
+    description: "Built on integrity, excellence, and collaboration, our team works tirelessly to achieve the best outcomes for every client.",
     icon: CircleIcon,
   },
   {
-    title: "Get Paid",
+    title: "Our Expertise",
     description:
-      "Complete the sale and receive payment directly to your account.",
+      "With years of industry experience, our team of professionals brings unparalleled knowledge and skill to every project.",
     icon: CheckCircledIcon,
   },
 ];
