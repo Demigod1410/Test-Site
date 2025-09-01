@@ -2,7 +2,8 @@
 
 import {
   Card,
-  CardHeader
+  CardHeader,
+  CardContent
 } from "@/components/ui/card";
 import { particlesConfig } from "@/config/particles-config";
 import {
@@ -19,20 +20,20 @@ import VanillaTilt from "vanilla-tilt";
 
 const steps = [
   {
-    title: "Our Mission",
+    title: "Our Vision",
     description:
-      "We're dedicated to delivering exceptional solutions that exceed our clients' expectations and drive innovation in our industry.",
+      "Built on trust, delivery excellence, innovation, and commitment to deliver impactful cybersecurity experiences powered by qualitative research and deep domain expertise.",
     icon: UploadIcon,
   },
   {
-    title: "Our Values",
-    description: "Built on integrity, excellence, and collaboration, our team works tirelessly to achieve the best outcomes for every client.",
+    title: "Our Mission",
+    description: "Navigate each case through risk discovery, threat intelligence, and transparency to enable stronger cybersecurity resilience and digital safety in today's cyberworld.",
     icon: CircleIcon,
   },
   {
-    title: "Our Expertise",
+    title: "7:13 Method",
     description:
-      "With years of industry experience, our team of professionals brings unparalleled knowledge and skill to every project.",
+      "Our structured approach harnesses 7 layers of security and its 13 principles, delivered by top industry leaders with strength, agility, and technical expertise.",
     icon: CheckCircledIcon,
   },
 ];
@@ -147,7 +148,7 @@ export function AboutUs() {
             {/* <div className="absolute -inset-x-20 -inset-y-10 opacity-30 blur-2xl -z-10 bg-gradient-to-r from-primary to-primary/20 rounded-full" /> */}
           </div>
           <p className="mt-4 text-xl text-muted-foreground">
-            Simple, secure, and straightforward process
+            Navigating complex cybersecurity challenges with expertise and innovation
           </p>
         </motion.div>
 
@@ -174,10 +175,12 @@ export function AboutUs() {
                       <h3 className="text-xl font-semibold leading-tight mb-3">
                         {step.title}
                       </h3>
+                    </CardHeader>
+                    <CardContent>
                       <p className="text-muted-foreground">
                         {step.description}
                       </p>
-                    </CardHeader>
+                    </CardContent>
                     <div className="absolute top-4 right-4 text-muted-foreground/10 text-7xl font-bold z-0">
                       {index + 1}
                     </div>

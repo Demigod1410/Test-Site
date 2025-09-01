@@ -4,6 +4,7 @@ import { AboutUs } from "@/components/about-us";
 import { Navbar } from "@/components/navbar";
 import { Testimonials } from "@/components/testimonials";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import { CoreTeam } from "@/components/core-team";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <WhyChooseUs />
         <AboutUs />
+        <CoreTeam />
         <Testimonials />
         <ContactForm />
       </main>
