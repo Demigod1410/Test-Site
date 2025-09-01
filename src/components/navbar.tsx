@@ -182,9 +182,7 @@ export function Navbar() {
 
           {/* Right side actions */}
           <div className="flex items-center gap-3">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
+            
             {/* Theme toggle */}
             <Button
               variant="ghost"
@@ -305,15 +303,6 @@ export function Navbar() {
                       </Link>
                     </div>
                   </div>
-                </div>
-
-                <div className="border-t py-4 space-y-3">
-                  <Button className="w-full" size="sm">
-                    Sell Licenses
-                  </Button>
-                  <Button className="w-full" variant="outline" size="sm">
-                    Sign In
-                  </Button>
                 </div>
               </div>
             </SheetContent>

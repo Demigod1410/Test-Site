@@ -48,8 +48,8 @@ export function HeroSection() {
   // Stats for the animated counter
   const [stats, setStats] = useState([
     { value: 0, target: 130, label: "Years Experience", suffix: "+" },
-    { value: 0, target: 500, label: "Security Projects" },
-    { value: 0, target: 99, label: "Client Satisfaction", suffix: "%" },
+    { value: 0, target: 45, label: "Past Projects Delivered", suffix: "+" },
+    { value: 0, target: 73, label: "Countries together in EU, US &amp; Asia", suffix: "+" },
   ]);
 
   // Animate the stats
