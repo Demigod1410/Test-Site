@@ -13,13 +13,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import {
-  Building,
-  CheckCircle,
-  Mail,
-  Phone
-} from "lucide-react";
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
+import { Building, CheckCircle, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -50,7 +49,8 @@ export function FooterContactForm() {
     console.log(values);
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 5000);
-  }  return (
+  }
+  return (
     <section className="dark relative h-fit overflow-hidden bg-background backdrop-blur-3xl text-foreground w-full">
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[size:60px_60px] -z-10" />
       <div className="relative z-10 px-8 pt-16 w-full max-w-[2000px] mx-auto">
@@ -58,11 +58,12 @@ export function FooterContactForm() {
           {/* Company Info Section */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Test Site</h2>
+              <h2 className="text-2xl font-bold mb-2">713 Cyber Security</h2>
               <p className="text-slate-400 max-w-md">
-                Providing enterprise software solutions. We&apos;re
-                dedicated to helping businesses grow with our cutting-edge
-                technology.
+                Providing comprehensive cybersecurity solutions. We&apos;re
+                dedicated to helping businesses achieve stronger cybersecurity
+                resilience with our cutting-edge expertise and methodological
+                approach.
               </p>
             </div>
 
@@ -71,16 +72,19 @@ export function FooterContactForm() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail size={18} className="text-primary" />
-                  <span className="text-slate-300">dakshrana1410@gmail.com</span>
+                  <span className="text-slate-300">
+                    varun.mallapur@713cybersec.com
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-primary" />
-                  <span className="text-slate-300">+91 9899980717 </span>
+                  <span className="text-slate-300">+91 9902000979</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Building size={18} className="text-primary" />
                   <span className="text-slate-300">
-                    123 Doonga Road, Dehradun, Uttarakhand, India
+                    No.27, Car Street Cross Road, Bhavathi, Temple Square,
+                    Managluru, Karnataka - 575001
                   </span>
                 </div>
               </div>
@@ -139,22 +143,6 @@ export function FooterContactForm() {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-primary transition-colors"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-primary transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
             </ul>
           </div>
           {/* Contact Form Section */}
@@ -168,8 +156,8 @@ export function FooterContactForm() {
                 <CheckCircle className="h-4 w-4" />
                 <AlertTitle>Thank you!</AlertTitle>
                 <AlertDescription>
-                  Your message has been sent successfully. We&apos;ll get back to you
-                  within 24 hours.
+                  Your message has been sent successfully. We&apos;ll get back
+                  to you within 24 hours.
                 </AlertDescription>
               </Alert>
             ) : (
@@ -266,15 +254,25 @@ export function FooterContactForm() {
               </Form>
             )}
           </div>
-        </div><footer className="w-full bg-background/80 backdrop-blur-xl mt-auto border-t border-primary/10">
+        </div>
+        <footer className="w-full bg-background/80 backdrop-blur-xl mt-auto border-t border-primary/10">
           <div className="w-full max-w-[2000px] mx-auto px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
-              <p>&copy; 2025 TestSite. All rights reserved.</p>
-              <p>Built by Daksh Rana</p>
+              <p>
+                &copy; 2025 713 Cyber Security Services Pvt Ltd. All rights
+                reserved.
+              </p>
+              <p>www.713cybersec.com</p>
               <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Privacy Policy
+                </a>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Terms of Service
+                </a>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Cookie Policy
+                </a>
               </div>
             </div>
           </div>
