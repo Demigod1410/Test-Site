@@ -1,11 +1,10 @@
-import { FooterContactForm as ContactForm } from "@/components/contact-form";
-import { HeroSection } from "@/components/hero-section";
 import { AboutUs } from "@/components/about-us";
-import { Navbar } from "@/components/navbar";
-import { Testimonials } from "@/components/testimonials";
-import { WhyChooseUs } from "@/components/why-choose-us";
+import { FooterContactForm as ContactForm } from "@/components/contact-form";
 import { CoreTeam } from "@/components/core-team";
+import { HeroSection } from "@/components/hero-section";
+import { Navbar } from "@/components/navbar";
 import { Services } from "@/components/services";
+import { WhyChooseUs } from "@/components/why-choose-us";
 
 export default function Home() {
   return (

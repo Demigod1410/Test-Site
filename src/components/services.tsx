@@ -1,18 +1,17 @@
 "use client";
 
 import {
-  Card,
-  CardHeader,
-  CardContent
+    Card,
+    CardContent,
+    CardHeader
 } from "@/components/ui/card";
 import { particlesConfig } from "@/config/particles-config";
 import {
-  LockClosedIcon,
-  MagnifyingGlassIcon,
-  GearIcon,
-  PersonIcon,
-  StarIcon,
-  EyeOpenIcon,
+    EyeOpenIcon,
+    GearIcon,
+    LockClosedIcon,
+    MagnifyingGlassIcon,
+    PersonIcon
 } from "@radix-ui/react-icons";
 import type { Container } from "@tsparticles/engine";
 import { tsParticles } from "@tsparticles/engine";
