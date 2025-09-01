@@ -15,7 +15,6 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import {
   BookOpen,
   DollarSign,
-  LifeBuoy,
   Menu,
   ShieldCheck,
   Users,
@@ -41,47 +40,31 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Features submenu items
-  const features = [
+  // Navigation items for cybersecurity services
+  const services = [
     {
-      title: "License Marketplace",
-      description: "Buy and sell software licenses securely",
-      icon: <DollarSign className="h-5 w-5 text-primary" />,
-      href: "#marketplace",
-    },
-    {
-      title: "Verification System",
-      description: "Automated validation for all licenses",
+      title: "Risk Management",
+      description: "Cyber Security Risk Management Framework",
       icon: <ShieldCheck className="h-5 w-5 text-primary" />,
-      href: "#verification",
+      href: "#services",
     },
     {
-      title: "Enterprise Solutions",
-      description: "Custom solutions for large organizations",
+      title: "Security Audits",
+      description: "Compliance Audits & Penetration Testing",
       icon: <Users className="h-5 w-5 text-primary" />,
-      href: "#enterprise",
+      href: "#services",
     },
     {
-      title: "Quick Transfer",
-      description: "Fast and secure license transfers",
+      title: "SOC Services",
+      description: "Security Operations Center Setup",
       icon: <Zap className="h-5 w-5 text-primary" />,
-      href: "#transfer",
-    },
-  ];
-
-  // Resources submenu items
-  const resources = [
-    {
-      title: "Help Center",
-      description: "Get support and answers to common questions",
-      icon: <LifeBuoy className="h-5 w-5 text-primary" />,
-      href: "#help",
+      href: "#services",
     },
     {
-      title: "Documentation",
-      description: "Detailed guides and resources",
-      icon: <BookOpen className="h-5 w-5 text-primary" />,
-      href: "#docs",
+      title: "Managed Security",
+      description: "Virtual CISO & Managed SOC Operations",
+      icon: <DollarSign className="h-5 w-5 text-primary" />,
+      href: "#services",
     },
   ];
 
@@ -105,7 +88,7 @@ export function Navbar() {
             />
           </div>
           <span className="text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            TestSite
+            713 Cybersecurity
           </span>
         </Link>
 
@@ -113,40 +96,52 @@ export function Navbar() {
         <div className="hidden md:flex items-center justify-between flex-1 pl-6">
           <NavigationMenu>
             <NavigationMenuList>
-              {/* Features Dropdown */}
-             <NavigationMenuItem>
+              {/* Why Choose Us Link */}
+              <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="#home"
+                    href="#why-choose-us"
                     className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
-                    Features
+                    Why Choose Us
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* Resources Dropdown */}
+              {/* About Us Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="#about-us"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    About Us
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* Services Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-sm font-medium">
-                  About Us
+                  Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4">
-                    {resources.map((resource) => (
-                      <li key={resource.title}>
+                    {services.map((service) => (
+                      <li key={service.title}>
                         <NavigationMenuLink asChild>
                           <Link
-                            href={resource.href}
+                            href={service.href}
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="flex items-center gap-2">
-                              {resource.icon}
+                              {service.icon}
                               <div className="text-sm font-medium leading-none">
-                                {resource.title}
+                                {service.title}
                               </div>
                             </div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">
-                              {resource.description}
+                              {service.description}
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -156,25 +151,21 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Static Links */}
+              {/* Core Team Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="#testimonials"
+                    href="#core-team"
                     className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
-                    Testimonials
+                    Core Team
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
+              
+              {/* Contact Us Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link
-                    href="#contact"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                  >
-                    Contact Us
-                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -229,7 +220,7 @@ export function Navbar() {
                         className="h-full w-full"
                       />
                     </div>
-                    <span className="font-bold text-xl">TestSite</span>
+                    <span className="font-bold text-xl">713 Cybersecurity</span>
                   </div>
                   <Button
                     variant="ghost"
@@ -241,41 +232,21 @@ export function Navbar() {
                 </div>
 
                 <div className="flex-1 overflow-auto py-6 space-y-6">
-                  {/* Mobile Features */}
+                  {/* Mobile Services */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-medium text-muted-foreground px-4">
-                      Features
+                      Services
                     </h4>
                     <div className="space-y-1">
-                      {features.map((feature) => (
+                      {services.map((service) => (
                         <Link
-                          key={feature.title}
-                          href={feature.href}
+                          key={service.title}
+                          href={service.href}
                           className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-accent rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
-                          {feature.icon}
-                          <span>{feature.title}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Mobile Resources */}
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-medium text-muted-foreground px-4">
-                      Resources
-                    </h4>
-                    <div className="space-y-1">
-                      {resources.map((resource) => (
-                        <Link
-                          key={resource.title}
-                          href={resource.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-accent rounded-md"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {resource.icon}
-                          <span>{resource.title}</span>
+                          {service.icon}
+                          <span>{service.title}</span>
                         </Link>
                       ))}
                     </div>
@@ -284,23 +255,31 @@ export function Navbar() {
                   {/* Mobile Static Links */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-medium text-muted-foreground px-4">
-                      More
+                      Navigation
                     </h4>
                     <div className="space-y-1">
                       <Link
-                        href="#testimonials"
+                        href="#why-choose-us"
                         className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
-                        Testimonials
+                        Why Choose Us
                       </Link>
                       <Link
-                        href="#contact"
+                        href="#about-us"
                         className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
-                        Contact
+                        About Us
                       </Link>
+                      <Link
+                        href="#core-team"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Core Team
+                      </Link>
+                      
                     </div>
                   </div>
                 </div>
