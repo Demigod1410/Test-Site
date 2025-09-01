@@ -47,9 +47,9 @@ export function HeroSection() {
 
   // Stats for the animated counter
   const [stats, setStats] = useState([
-    { value: 0, target: 2500, label: "Active Users" },
-    { value: 0, target: 15000, label: "Happy Customers" },
-    { value: 0, target: 95, label: "Satisfaction Rate", suffix: "%" },
+    { value: 0, target: 130, label: "Years Experience", suffix: "+" },
+    { value: 0, target: 500, label: "Security Projects" },
+    { value: 0, target: 99, label: "Client Satisfaction", suffix: "%" },
   ]);
 
   // Animate the stats
@@ -93,11 +93,10 @@ export function HeroSection() {
       
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Turn Unused Software into Real Value
+              Trust, Excellence, Innovation in Cybersecurity
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              SoftSell is the secure marketplace for businesses to buy and sell
-              unused software licenses at incredible prices.
+              713 Cybersecurity delivers impactful cybersecurity solutions powered by 130+ man-years of industry expertise, qualitative research, and deep domain knowledge to solve complex business challenges.
             </p>
           </div>
 
