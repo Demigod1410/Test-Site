@@ -2,7 +2,8 @@
 
 import {
   Card,
-  CardHeader
+  CardHeader,
+  CardContent
 } from "@/components/ui/card";
 import { particlesConfig } from "@/config/particles-config";
 import {
@@ -20,23 +21,23 @@ import VanillaTilt from "vanilla-tilt";
 
 const features = [
   {
-    title: "Fast Payments",
-    description: "Receive payment within 24 hours of completing your sale.",
+    title: "Standards-Based Framework",
+    description: "Methodological approach using ISO 27001, NIST, GDPR, SOC 2 frameworks to drive cybersecurity delivery excellence.",
     icon: LightningBoltIcon,
   },
   {
-    title: "Transparent Valuation",
-    description: "Get real-time market values based on current demand.",
+    title: "Comprehensive Solutions",
+    description: "One-stop shop for all cybersecurity needs - from assessments to managed security services.",
     icon: StarIcon,
   },
   {
-    title: "Trusted by 1,000+ Users",
-    description: "Join thousands of satisfied customers who trust SoftSell.",
+    title: "Dual-Level Engagement",
+    description: "Expert engagement with both technical teams and top management for seamless cybersecurity goal achievement.",
     icon: PersonIcon,
   },
   {
-    title: "Secure Transactions",
-    description: "Enterprise-grade security for all license transfers.",
+    title: "Viable & Sustainable Security",
+    description: "Committed to understanding core business challenges and delivering secure, sustainable cybersecurity solutions.",
     icon: LockClosedIcon,
   },
 ];
@@ -147,7 +148,7 @@ export function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="mt-4 text-xl text-muted-foreground">
-            Leading the way in secure software license resale
+            Delivering viable, sustainable, and secure cybersecurity solutions with methodological excellence
           </p>
         </motion.div>
 
@@ -174,10 +175,12 @@ export function WhyChooseUs() {
                       <h3 className="text-xl font-semibold leading-tight mb-3">
                         {feature.title}
                       </h3>
+                    </CardHeader>
+                    <CardContent>
                       <p className="text-muted-foreground">
                         {feature.description}
                       </p>
-                    </CardHeader>
+                    </CardContent>
                     <div className="absolute top-4 right-4 text-muted-foreground/10 text-7xl font-bold z-0">
                       {index + 1}
                     </div>
