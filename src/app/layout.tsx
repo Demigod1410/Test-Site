@@ -9,14 +9,14 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "TestSite",
+  title: "713 Cybersecurity",
   description:
-    "TestSite template",
+    "713 Cybersecurity is a leading provider of cybersecurity solutions.",
   keywords: [
     "software license",
     "license resale",
     "software marketplace",
-    "SoftSell",
+    "713 Cybersecurity",
   ],
 };
 
