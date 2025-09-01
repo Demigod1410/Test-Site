@@ -128,7 +128,7 @@ export function AboutUs() {
 
   return (
     <section
-      // id="how-it-works"
+      id="about-us"
       className="relative min-h-screen overflow-hidden"
     >
       <div id="howItWorksParticles" className="absolute inset-0 -z-10" />
