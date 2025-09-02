@@ -95,6 +95,18 @@ export function Navbar() {
         <div className="hidden md:flex items-center justify-between flex-1 pl-6">
           <NavigationMenu>
             <NavigationMenuList>
+              {/* Home Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="#home"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    Home
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
               {/* Why Choose Us Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
@@ -257,6 +269,13 @@ export function Navbar() {
                       Navigation
                     </h4>
                     <div className="space-y-1">
+                      <Link
+                        href="#home"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Home
+                      </Link>
                       <Link
                         href="#why-choose-us"
                         className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"

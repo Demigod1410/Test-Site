@@ -75,7 +75,7 @@ export function HeroSection() {
   }, [stats]);
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-b from-background to-primary/5 flex items-center justify-center overflow-hidden relative py-16">
+    <section id="home" className="w-full min-h-screen bg-gradient-to-b from-background to-primary/5 flex items-center justify-center overflow-hidden relative py-16">
       <div id="heroParticles" className="absolute inset-0 -z-0" />
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
