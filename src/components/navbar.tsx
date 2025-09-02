@@ -3,22 +3,16 @@
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import {
-  DollarSign,
   Menu,
-  ShieldCheck,
-  Users,
-  X,
-  Zap
+  X
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -38,34 +32,6 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Navigation items for cybersecurity services
-  const services = [
-    {
-      title: "Risk Management",
-      description: "Cyber Security Risk Management Framework",
-      icon: <ShieldCheck className="h-5 w-5 text-primary" />,
-      href: "#services",
-    },
-    {
-      title: "Security Audits",
-      description: "Compliance Audits & Penetration Testing",
-      icon: <Users className="h-5 w-5 text-primary" />,
-      href: "#services",
-    },
-    {
-      title: "SOC Services",
-      description: "Security Operations Center Setup",
-      icon: <Zap className="h-5 w-5 text-primary" />,
-      href: "#services",
-    },
-    {
-      title: "Managed Security",
-      description: "Virtual CISO & Managed SOC Operations",
-      icon: <DollarSign className="h-5 w-5 text-primary" />,
-      href: "#services",
-    },
-  ];
 
   return (
     <header
@@ -143,35 +109,16 @@ export function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* Services Dropdown */}
+              {/* Services Link */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium">
-                  Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4">
-                    {services.map((service) => (
-                      <li key={service.title}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="flex items-center gap-2">
-                              {service.icon}
-                              <div className="text-sm font-medium leading-none">
-                                {service.title}
-                              </div>
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">
-                              {service.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/#services"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    Services
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Core Team Link */}
@@ -255,26 +202,6 @@ export function Navbar() {
                 </div>
 
                 <div className="flex-1 overflow-auto py-6 space-y-6">
-                  {/* Mobile Services */}
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-medium text-muted-foreground px-4">
-                      Services
-                    </h4>
-                    <div className="space-y-1">
-                      {services.map((service) => (
-                        <Link
-                          key={service.title}
-                          href={service.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-accent rounded-md"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {service.icon}
-                          <span>{service.title}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Mobile Static Links */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-medium text-muted-foreground px-4">
@@ -308,6 +235,13 @@ export function Navbar() {
                         onClick={() => setIsOpen(false)}
                       >
                         What We Do
+                      </Link>
+                      <Link
+                        href="#services"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Services
                       </Link>
                       <Link
                         href="#core-team"
