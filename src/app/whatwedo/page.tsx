@@ -1,5 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { WhatWeDo } from "@/components/whatwedo";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
     title: 'What We Do | Your Company',
@@ -8,8 +10,10 @@ export const metadata: Metadata = {
 
 export default function WhatWeDoPage() {
     return (
-        <main className="container mx-auto px-4 py-8">
-           <h1> HI</h1>
+        
+        <main>
+             <Navbar />
+           <WhatWeDo />
         </main>
     );
 }
