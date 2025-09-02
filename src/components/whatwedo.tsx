@@ -3,13 +3,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { particlesConfig } from "@/config/particles-config";
 import {
-  CheckCircledIcon,
-  GearIcon,
-  LockClosedIcon,
-  MagnifyingGlassIcon,
-  PersonIcon,
-  StarIcon,
-  EyeOpenIcon,
+    CheckCircledIcon,
+    EyeOpenIcon,
+    GearIcon,
+    LockClosedIcon,
+    MagnifyingGlassIcon,
+    PersonIcon,
+    StarIcon,
 } from "@radix-ui/react-icons";
 import { Container } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
@@ -205,7 +205,7 @@ export function WhatWeDo() {
           className="mx-auto max-w-7xl"
         >
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-            {businessChallenges.map((challenge, index) => (
+            {businessChallenges.map((challenge) => (
               <motion.div
                 key={challenge.title}
                 variants={itemVariants}
