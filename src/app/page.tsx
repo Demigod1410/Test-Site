@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
 import { Services } from "@/components/services";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import { WhatWeDo } from "@/components/whatwedo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutUs />
         <Services />
         <WhyChooseUs />
+        <WhatWeDo />
         <CoreTeam />
         <ContactForm />
       </main>
