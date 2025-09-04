@@ -205,9 +205,6 @@ export function CoreTeam() {
                         </div>
                       </div>
                     </CardContent>
-                    <div className="absolute top-4 right-4 text-muted-foreground/10 text-6xl font-bold z-0">
-                      {index + 1}
-                    </div>
                   </Card>
                 </TiltCard>
               </motion.div>

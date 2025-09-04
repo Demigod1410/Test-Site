@@ -216,9 +216,6 @@ export function Services() {
                         ))}
                       </ul>
                     </CardContent>
-                    <div className="absolute top-3 right-3 text-muted-foreground/10 text-4xl font-bold z-0">
-                      {index + 1}
-                    </div>
                   </Card>
                 </TiltCard>
               </motion.div>

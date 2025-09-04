@@ -181,9 +181,6 @@ export function WhyChooseUs() {
                         {feature.description}
                       </p>
                     </CardContent>
-                    <div className="absolute top-4 right-4 text-muted-foreground/10 text-7xl font-bold z-0">
-                      {index + 1}
-                    </div>
                   </Card>
                 </TiltCard>
               </motion.div>
