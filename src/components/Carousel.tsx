@@ -1,6 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'motion/react';
-import React, { JSX } from 'react';
+import { motion, PanInfo, useMotionValue } from 'motion/react';
+import React, { JSX, useEffect, useRef, useState } from 'react';
 
 // replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
@@ -176,9 +175,6 @@ export default function Carousel({
         onAnimationComplete={handleAnimationComplete}
       >
         {carouselItems.map((item, index) => {
-          const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
-          const outputRange = [90, 0, -90];
-          const rotateY = useTransform(x, range, outputRange, { clamp: false });
           return (
             <motion.div
               key={index}
@@ -190,7 +186,6 @@ export default function Carousel({
               style={{
                 width: itemWidth,
                 height: round ? itemWidth : '100%',
-                rotateY: rotateY,
                 ...(round && { borderRadius: '50%' })
               }}
               transition={effectiveTransition}

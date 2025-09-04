@@ -163,7 +163,7 @@ export function CoreTeam() {
           className="mx-auto max-w-7xl"
         >
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member) => (
               <motion.div
                 key={member.name}
                 variants={itemVariants}

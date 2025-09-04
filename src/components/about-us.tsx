@@ -160,7 +160,7 @@ export function AboutUs() {
           className="mx-auto max-w-7xl"
         >
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <motion.div
                 key={step.title}
                 variants={itemVariants}

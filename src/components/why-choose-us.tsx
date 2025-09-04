@@ -160,7 +160,7 @@ export function WhyChooseUs() {
           className="mx-auto max-w-7xl"
         >
           <div className="grid gap-12 md:grid-cols-2">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
