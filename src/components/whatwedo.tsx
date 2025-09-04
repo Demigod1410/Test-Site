@@ -155,9 +155,9 @@ export function WhatWeDo() {
           >
             <Carousel
               items={businessChallenges}
-              baseWidth={600}
+              baseWidth={700}
               autoplay={true}
-              autoplayDelay={4000}
+              autoplayDelay={3000}
               pauseOnHover={true}
               loop={true}
               round={false}
