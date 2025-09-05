@@ -21,14 +21,16 @@ Visit our platform: [https://test-site-psi-blond.vercel.app/](https://test-site-
 
 ## ✨ Key Features
 
-- �️ **SOC Solutions** - Complete Security Operations Center setup and management
+- 🛡️ **SOC Solutions** - Complete Security Operations Center setup and management
 - 🎯 **Risk Management** - Comprehensive risk assessment and remediation frameworks
 - 🔍 **Security Audits** - Compliance audits (ISO27001, PCI DSS, SOC2, GDPR)
 - 🤖 **SOAR Implementation** - Security Orchestration, Automation & Response
 - 👥 **Expert Team** - 130+ years combined industry experience
 - 🌓 **Modern Interface** - Beautiful dark/light theme with responsive design
-- 🔄 **Interactive Elements** - Motion animations and engaging user experience
+- 🎠 **Interactive Carousel** - Dynamic SOC solutions showcase with autoplay and drag functionality
+- 🎬 **Motion Animations** - Sophisticated Framer Motion animations throughout the site
 - 📱 **Fully Responsive** - Optimized for all devices and screen sizes
+- 🧹 **Clean Design** - Professional card layouts without numbered overlays
 
 ## 🛠️ Technology Stack
 
@@ -39,15 +41,37 @@ Visit our platform: [https://test-site-psi-blond.vercel.app/](https://test-site-
 - **Vercel AI SDK** - For AI chat integration
 
 ### UI Components & Libraries
-- **Shadcn UI** - Accessible UI components
-- **Framer Motion** - Animations and transitions
-- **TSParticles** - Background particle effects
+- **Shadcn UI** - Accessible UI components with clean design
+- **Framer Motion** - Advanced animations and transitions with staggered reveals
+- **TSParticles** - Interactive background particle effects
 - **VanillaTilt** - Interactive tilt effects on cards
+- **Custom Carousel** - Interactive carousel with drag, autoplay, and loop functionality
+- **React Icons** - Comprehensive icon library for enhanced visual elements
 
 ### AI Integration
 - **Google Gemini AI** - Powers the intelligent chat assistant
 - **@ai-sdk/google** - Integration of the Gemini model
 - **@ai-sdk/react** - React hooks for AI interaction
+
+## 🚀 Recent Updates & Enhancements
+
+### ✨ New Features
+- **Interactive Carousel Component**: Dynamic showcase of SOC solutions with autoplay, drag functionality, and smooth transitions
+- **Enhanced Animations**: Sophisticated Framer Motion animations with staggered reveals and 3D effects
+- **Clean Design Improvements**: Removed numbered overlays from all card components for a professional appearance
+- **Improved Icon Integration**: Updated carousel icons to match the consistent design system
+
+### 🎨 UI/UX Improvements
+- **Motion Animations**: Added section-level animations with progressive reveals
+- **Card Design**: Streamlined card layouts across all components (Services, About Us, Why Choose Us, Core Team)
+- **Carousel Experience**: Configurable autoplay delay, pause on hover, and loop functionality
+- **Responsive Design**: Enhanced mobile and tablet experiences
+
+### 🛠️ Technical Enhancements
+- **React Hooks Compliance**: Fixed all React hooks rule violations for clean builds
+- **Performance Optimization**: Improved build times and bundle optimization
+- **Type Safety**: Enhanced TypeScript implementation across components
+- **Build Process**: Streamlined development and production builds
 
 ## 🏢 Our Services
 
@@ -77,6 +101,135 @@ Visit our platform: [https://test-site-psi-blond.vercel.app/](https://test-site-
 - Virtual CISO Services
 - Managed SOC Operations
 - Regulatory Compliance Management
+
+## 🎠 SOC Solutions Carousel
+
+The interactive carousel showcases our comprehensive SOC business challenges and solutions:
+
+1. **Security Controls Alignment** - SOC monitoring integration
+2. **Security Controls Mapping** - Risk assessment and infrastructure coverage
+3. **Risk-based Monitoring** - Real-time security monitoring and remediation
+4. **Solution Deployment** - Standardized security controls configuration
+5. **Tooling Evaluation** - Security tool assessment and licensing
+6. **Incident Management** - Corrective and preventive security actions
+7. **Compliance Management** - Regulatory compliance (GDPR, FFIEC, HIPAA)
+8. **SOAR Implementation** - Security orchestration and automated response
+
+## 👥 Leadership Team
+
+### Core Team Members
+- **Mr. Varun Mallapur** - Chief Information Security Officer (20+ Years)
+- **Mr. Praveen P Kadle** - Chief Financial Officer & Strategic Advisor (20+ Years)
+- **Mr. Uday Gurkar** - Chief Governance & Compliance Officer (28+ Years)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- PNPM package manager
+- Google Gemini AI API key (for chat functionality)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Demigod1410/Test-Site.git
+cd Test-Site
+
+# Install dependencies
+pnpm install
+
+# Set up environment variables
+cp .env.example .env.local
+# Add your Google Gemini AI API key
+
+# Run development server
+pnpm dev
+```
+
+### Build for Production
+
+```bash
+# Create optimized production build
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout with theme provider
+│   ├── page.tsx          # Main homepage
+│   └── api/gemini/       # AI chat API endpoint
+├── components/           # React components
+│   ├── ui/              # Shadcn UI components
+│   ├── Carousel.tsx     # Interactive carousel component
+│   ├── hero-section.tsx # Landing section with stats
+│   ├── about-us.tsx     # Company vision and mission
+│   ├── services.tsx     # Service offerings
+│   ├── why-choose-us.tsx # Value propositions
+│   ├── whatwedo.tsx     # SOC solutions carousel
+│   ├── core-team.tsx    # Leadership profiles
+│   └── contact-form.tsx # Contact and footer
+├── config/              # Configuration files
+│   └── particles-config.ts # Particle effects config
+└── lib/                 # Utilities and data
+    ├── utils.ts         # Helper functions
+    └── data.ts          # Static data
+```
+
+## 🎨 Design System
+
+### Color Scheme
+- **Primary**: Cybersecurity blue gradient
+- **Background**: Dynamic dark/light themes
+- **Cards**: Semi-transparent with backdrop blur
+- **Text**: High contrast for accessibility
+
+### Typography
+- **Headings**: Geist font with gradient text effects
+- **Body**: Clean, readable typography
+- **Code**: Monospace for technical content
+
+### Animations
+- **Page Transitions**: Smooth fade and slide effects
+- **Card Interactions**: Hover and tilt animations
+- **Carousel**: Drag, autoplay, and transition animations
+- **Staggered Reveals**: Progressive content loading
+
+## 🌐 Deployment
+
+The site is deployed on Vercel with automatic deployments from the main branch:
+- **Production**: [https://test-site-psi-blond.vercel.app/](https://test-site-psi-blond.vercel.app/)
+- **Preview**: Automatic preview deployments for pull requests
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**713 Cybersecurity**
+- Website: [https://test-site-psi-blond.vercel.app/](https://test-site-psi-blond.vercel.app/)
+- Repository: [https://github.com/Demigod1410/Test-Site](https://github.com/Demigod1410/Test-Site)
+
+---
+
+<div align="center">
+<p><strong>Building stronger cybersecurity resilience through innovation and expertise</strong></p>
+</div>
 
 ## 🎯 What We Do
 
