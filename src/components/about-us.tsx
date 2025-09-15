@@ -142,7 +142,7 @@ export function AboutUs() {
           className="mx-auto max-w-2xl lg:text-center mb-16 lg:mb-20"
         >
           <div className="relative inline-block">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#0cf1fc] to-[#4882ba]">
               About Us
             </h2>
             {/* <div className="absolute -inset-x-20 -inset-y-10 opacity-30 blur-2xl -z-10 bg-gradient-to-r from-primary to-primary/20 rounded-full" /> */}
