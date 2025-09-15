@@ -43,11 +43,11 @@ export function Navbar() {
       <div className="w-full px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         {/* Logo with Favicon */}
         <Link href="/" className="flex items-center space-x-2 font-bold">
-          <div className="h-8 w-8 flex items-center justify-center">
+          <div className="h-12 w-12 flex items-center justify-center">
             <Image
               src="/713 Cybersecurity Services Logo.svg"
-              height={50}
-              width={50}
+              height={150}
+              width={150}
               alt="Logo"
               className="h-full w-full"
             />
@@ -187,11 +187,11 @@ export function Navbar() {
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center py-4 border-b">
                   <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 flex items-center justify-center">
+                    <div className="h-10 w-10 flex items-center justify-center">
                       <Image
-                        width={50}
-                        height={50}
-                        src="/favicon.ico"
+                        width={80}
+                        height={80}
+                        src="/713 Cybersecurity Services Logo.svg"
                         alt="Logo"
                         className="h-full w-full"
                       />
