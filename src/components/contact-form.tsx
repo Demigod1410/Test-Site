@@ -27,6 +27,7 @@ import * as z from "zod";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(6, "Please enter a valid phone number").optional(),
   company: z.string().min(2, "Company name must be at least 2 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
@@ -39,6 +40,7 @@ export function FooterContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       company: "",
       message: "",
     },
@@ -206,7 +208,27 @@ export function FooterContactForm() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-slate-300">
+                            Phone Number
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Your phone number"
+                              type="tel"
+                              {...field}
+                              className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
                     <FormField
                       control={form.control}
                       name="company"

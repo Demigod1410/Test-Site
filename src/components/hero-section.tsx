@@ -1,5 +1,15 @@
 "use client";
 import { particlesConfig } from "@/config/particles-config";
+import { ContactPopupForm } from "@/components/contact-popup-form";
+import { Button } from "@/components/ui/button";
+import { 
+  Sheet, 
+  SheetContent, 
+  SheetDescription, 
+  SheetHeader,
+  SheetTitle, 
+  SheetTrigger 
+} from "@/components/ui/sheet";
 import type { Container } from "@tsparticles/engine";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
@@ -117,6 +127,30 @@ export function HeroSection() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Get In Touch Button with Popup */}
+          <div className="mt-10">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button 
+                  className="bg-gradient-to-r from-[#0cf1fc] to-[#4882ba] text-white shadow hover:opacity-90 h-11 px-8 py-2"
+                >
+                  Get In Touch
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="w-full md:max-w-md bg-background/95 backdrop-blur-xl border-primary/10">
+                <SheetHeader className="px-6 pt-6">
+                  <SheetTitle className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0cf1fc] to-[#4882ba]">
+                    Contact Us
+                  </SheetTitle>
+                  <SheetDescription className="text-slate-400">
+                    Fill out the form below and we&apos;ll get back to you shortly.
+                  </SheetDescription>
+                </SheetHeader>
+                <ContactPopupForm />
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
