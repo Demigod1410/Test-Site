@@ -66,7 +66,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     Home
                   </Link>
@@ -78,7 +78,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/#why-choose-us"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     Why Choose Us
                   </Link>
@@ -90,7 +90,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/#about-us"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     About Us
                   </Link>
@@ -102,7 +102,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/#what-we-do"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     What We Do
                   </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/#services"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     Services
                   </Link>
@@ -126,7 +126,7 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/#core-team"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                   >
                     Core Team
                   </Link>
@@ -136,6 +136,12 @@ export function Navbar() {
               {/* Contact Us Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
+                  <Link
+                    href="/#contact"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  >
+                    Contact Us
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -210,45 +216,52 @@ export function Navbar() {
                     <div className="space-y-1">
                       <Link
                         href="#home"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         Home
                       </Link>
                       <Link
                         href="#why-choose-us"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         Why Choose Us
                       </Link>
                       <Link
                         href="#about-us"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         About Us
                       </Link>
                       <Link
                         href="#what-we-do"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         What We Do
                       </Link>
                       <Link
                         href="#services"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         Services
                       </Link>
                       <Link
                         href="#core-team"
-                        className="flex items-center px-4 py-2 text-sm hover:bg-accent rounded-md"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         Core Team
+                      </Link>
+                      <Link
+                        href="#contact"
+                        className="flex items-center px-4 py-2 text-sm hover:bg-blue-500/20 hover:text-blue-500 rounded-md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Contact Us
                       </Link>
                       
                     </div>

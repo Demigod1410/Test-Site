@@ -92,7 +92,7 @@ export function HeroSection() {
 
       
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl bg-gradient-to-r from-[#0cf1fc] to-[#4882ba] bg-clip-text text-transparent">
               Trust, Excellence, Innovation in Cybersecurity
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

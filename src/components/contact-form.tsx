@@ -51,7 +51,7 @@ export function FooterContactForm() {
     setTimeout(() => setIsSubmitted(false), 5000);
   }
   return (
-    <section className="dark relative h-fit overflow-hidden bg-background backdrop-blur-3xl text-foreground w-full">
+    <section id="contact" className="dark relative h-fit overflow-hidden bg-background backdrop-blur-3xl text-foreground w-full">
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[size:60px_60px] -z-10" />
       <div className="relative z-10 px-8 pt-16 w-full max-w-[2000px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
