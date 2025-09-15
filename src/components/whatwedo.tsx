@@ -97,7 +97,7 @@ export function WhatWeDo() {
     >
       <motion.div 
         id="whatWeDoParticles" 
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 safari-fix"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.5 }}
@@ -147,11 +147,11 @@ export function WhatWeDo() {
           className="flex justify-center items-center"
         >
           <motion.div 
-            initial={{ opacity: 0, rotateY: -15 }}
-            whileInView={{ opacity: 1, rotateY: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
-            style={{ height: '900px', position: 'relative' }}
+            style={{ height: '900px', position: 'relative', WebkitBackfaceVisibility: 'hidden' }}
           >
             <Carousel
               items={businessChallenges}

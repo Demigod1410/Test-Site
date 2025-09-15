@@ -72,5 +72,7 @@ export const particlesConfig: ISourceOptions = {
   fullScreen: {
     enable: false,
     zIndex: -1
-  }
+  },
+  detectRetina: true,
+  fpsLimit: 60
 };

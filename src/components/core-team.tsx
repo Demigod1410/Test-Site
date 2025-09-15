@@ -74,18 +74,18 @@ function TiltCard({ children, className }: { children: React.ReactNode; classNam
   useEffect(() => {
     const currentCard = cardRef.current;
     if (currentCard) {
+      // Check for Safari
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      
       VanillaTilt.init(currentCard, {
-        max: 15,
+        max: isSafari ? 10 : 15,
         speed: 400,
         scale: 1.03,
-        glare: true,
+        glare: !isSafari, // Disable glare effect in Safari
         "max-glare": 0.3,
-        gyroscope: true,
-        gyroscopeMinAngleX: -45,
-        gyroscopeMaxAngleX: 45,
-        gyroscopeMinAngleY: -45,
-        gyroscopeMaxAngleY: 45,
+        gyroscope: !isSafari, // Disable gyroscope in Safari
         transition: true,
+        perspective: 1000, // Add perspective for better Safari support
       });
     }
     return () => {

@@ -18,6 +18,15 @@ export const metadata: Metadata = {
     "software marketplace",
     "713 Cybersecurity",
   ],
+  icons: {
+    icon: [
+      { url: '/globe.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' }
+    ]
+  }
 };
 
 export default function RootLayout({
@@ -27,6 +36,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <style dangerouslySetInnerHTML={{ __html: `
+          @supports (-webkit-touch-callout: none) {
+            .safari-fix {
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+            }
+          }
+        `}} />
+      </head>
       <body className={`${geist.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
