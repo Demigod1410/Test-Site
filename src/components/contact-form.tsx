@@ -58,7 +58,7 @@ export function FooterContactForm() {
           {/* Company Info Section */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-2xl font-bold mb-2">713 Cyber Security</h2>
+              <h2 className="text-2xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#0cf1fc] to-[#4882ba]">713 Cyber Security</h2>
               <p className="text-slate-400 max-w-md">
                 Providing comprehensive cybersecurity solutions. We&apos;re
                 dedicated to helping businesses achieve stronger cybersecurity
@@ -147,7 +147,7 @@ export function FooterContactForm() {
           </div>
           {/* Contact Form Section */}
           <div className="lg:col-span-2 bg-card/80 backdrop-blur-sm rounded-lg p-6 border border-primary/10 shadow-lg">
-            <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#4882ba]">
               Send us a message
             </h3>
 

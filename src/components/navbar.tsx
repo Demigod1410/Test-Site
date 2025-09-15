@@ -52,7 +52,7 @@ export function Navbar() {
               className="h-full w-full"
             />
           </div>
-          <span className="text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          <span className="text-xl bg-gradient-to-r from-[#0cf1fc] to-[#4882ba] bg-clip-text text-transparent">
             713 Cybersecurity
           </span>
         </Link>
@@ -196,7 +196,7 @@ export function Navbar() {
                         className="h-full w-full"
                       />
                     </div>
-                    <span className="font-bold text-xl">713 Cybersecurity</span>
+                    <span className="font-bold text-xl bg-gradient-to-r from-[#0cf1fc] to-[#4882ba] bg-clip-text text-transparent">713 Cybersecurity</span>
                   </div>
                   <Button
                     variant="ghost"
