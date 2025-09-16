@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: '/713 Cybersecurity Services Logo.svg', type: 'image/svg+xml' },
+      { url: '/713 Logo.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: 'any' }
     ],
     apple: [

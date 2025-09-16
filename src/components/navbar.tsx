@@ -45,7 +45,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center space-x-2 font-bold">
           <div className="h-12 w-12 flex items-center justify-center">
             <Image
-              src="/713 Cybersecurity Services Logo.svg"
+              src="/713 Logo.svg"
               height={150}
               width={150}
               alt="Logo"
