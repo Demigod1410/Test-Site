@@ -13,7 +13,7 @@ import {
 import { Container } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Carousel from './Carousel';
 
 const businessChallenges = [
@@ -68,6 +68,22 @@ const businessChallenges = [
 ];
 
 export function WhatWeDo() {
+  const [carouselWidth, setCarouselWidth] = useState(700);
+  
+  useEffect(() => {
+    // Handle responsive sizing
+    const handleResize = () => {
+      setCarouselWidth(Math.min(700, window.innerWidth - 32));
+    };
+    
+    // Set initial size
+    handleResize();
+    
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   useEffect(() => {
     let container: Container | undefined;
 
@@ -104,7 +120,7 @@ export function WhatWeDo() {
       />
 
       <motion.div 
-        className="container max-w-[1600px] relative z-10 mx-auto px-4 py-24 sm:px-6 lg:py-32"
+        className="container max-w-[1600px] relative z-10 mx-auto px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:py-28"
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -151,11 +167,16 @@ export function WhatWeDo() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
-            style={{ height: '900px', position: 'relative', WebkitBackfaceVisibility: 'hidden' }}
+            className="w-full"
+            style={{ 
+              height: 'clamp(500px, 70vh, 900px)', 
+              position: 'relative', 
+              WebkitBackfaceVisibility: 'hidden' 
+            }}
           >
             <Carousel
               items={businessChallenges}
-              baseWidth={700}
+              baseWidth={carouselWidth}
               autoplay={true}
               autoplayDelay={3000}
               pauseOnHover={true}
