@@ -150,11 +150,12 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${
+      className={`relative overflow-hidden p-4 mx-auto ${
         round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#222]'
       }`}
       style={{
         width: `${baseWidth}px`,
+        margin: '0 auto',
         ...(round && { height: `${baseWidth}px` })
       }}
     >

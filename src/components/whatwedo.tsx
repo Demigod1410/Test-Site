@@ -73,7 +73,10 @@ export function WhatWeDo() {
   useEffect(() => {
     // Handle responsive sizing
     const handleResize = () => {
-      setCarouselWidth(Math.min(700, window.innerWidth - 32));
+      const isMobile = window.innerWidth < 768;
+      // For mobile view, constrain by screen width
+      // For desktop, use a fixed size since the container will be centered with width constraints
+      setCarouselWidth(isMobile ? Math.min(700, window.innerWidth - 32) : 700);
     };
     
     // Set initial size
@@ -167,7 +170,7 @@ export function WhatWeDo() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
-            className="w-full"
+            className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto"
             style={{ 
               height: 'clamp(500px, 70vh, 900px)', 
               position: 'relative', 

@@ -47,7 +47,7 @@ export function Navbar() {
             <Image
               src="/713 Logo.svg"
               height={150}
-              width={150}
+              width={300}
               alt="Logo"
               className="h-full w-full"
             />

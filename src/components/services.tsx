@@ -11,7 +11,8 @@ import {
     GearIcon,
     LockClosedIcon,
     MagnifyingGlassIcon,
-    PersonIcon
+    PersonIcon,
+    CheckCircledIcon
 } from "@radix-ui/react-icons";
 import type { Container } from "@tsparticles/engine";
 import { tsParticles } from "@tsparticles/engine";
@@ -34,6 +35,7 @@ const services = [
     category: "Cyber Security Audits",
     icon: MagnifyingGlassIcon,
     services: [
+      "Internal & Technical Audits for Limited Scopes including platform assessments",
       "Compliance Audits (ISO27001, PCI DSS, SOC2, GDPR)",
       "Vulnerability Assessment & Penetration Testing",
       "Cloud Security & Application Testing",
@@ -46,7 +48,23 @@ const services = [
     services: [
       "SOC Setup & Implementation",
       "Solution Mapping & Deployment",
-      "Security Automation & Response (SOAR)"
+      "Security Automation & Response (SOAR)",
+      "SOC Monitoring"
+    ]
+  },
+  {
+    category: "Security Ops Services",
+    icon: CheckCircledIcon,
+    services: [
+      "Threat Mapping Framework Assessment & Consulting",
+      "Audit Remediation Consulting",
+      "Policy Readiness for Statutory Compliances",
+      "Transition & Transformation Reviews",
+      "Risk Monitoring for SecOps",
+      "Security Tools Configuration (SIEM, DLP, AD)",
+      "Get2Green Program Implementation",
+      "Security Incident Investigation & Action Planning",
+      "On-Demand SecOps Team Services"
     ]
   },
   {
@@ -56,7 +74,8 @@ const services = [
       "Next-Gen Security Management Tools",
       "AI/ML-based Cyber Security Solutions",
       "Security Monitoring & Incident Response",
-      "Cyber Defense Platform Integration"
+      "Cyber Defense Platform Integration",
+      "Virtual Security Compliance & Governance Services"
     ]
   },
   {
@@ -176,7 +195,7 @@ export function Services() {
             Our Services
           </h2>
           <p className="mt-4 text-xl text-muted-foreground">
-            Comprehensive cybersecurity solutions tailored to your business needs
+            We have designed our services into specific categories to meet the immediate low-hanging fruits and requirements. 713 categorizes it into a Security operations & Core Cyber-security & IT services
           </p>
         </motion.div>
 
@@ -187,7 +206,7 @@ export function Services() {
           viewport={{ once: true }}
           className="mx-auto max-w-[1500px]"
         >
-          <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {services.map((service) => (
               <motion.div
                 key={service.category}

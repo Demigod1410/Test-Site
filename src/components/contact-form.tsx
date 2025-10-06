@@ -85,8 +85,9 @@ export function FooterContactForm() {
                 <div className="flex items-center gap-3">
                   <Building size={18} className="text-primary" />
                   <span className="text-slate-300">
-                    No.27, Car Street Cross Road, Bhavathi, Temple Square,
-                    Managluru, Karnataka - 575001
+                    Address: 713 Cyber Security Services Pvt Ltd.
+                    Chitrapur, Shirali, Uttara Kannada, Karnataka - 581354.
+
                   </span>
                 </div>
               </div>

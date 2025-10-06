@@ -21,7 +21,7 @@ import VanillaTilt from "vanilla-tilt";
 const teamMembers = [
   {
     name: "Mr. Varun Mallapur",
-    role: "Chief Information Security Officer",
+    role: "Founder & Director",
     experience: "20+ Years Experience",
     description: "Industry leader with over 20 years in information security, former Global Internal Auditor at IBM India. Led research teams establishing security frameworks for IBM Hybrid Cloud, cognitive platforms, Data & AI. Expert in security policy implementation, SOCs setup, internal audits, and cybersecurity management.",
     icon: PersonIcon,
@@ -29,17 +29,17 @@ const teamMembers = [
   },
   {
     name: "Mr. Praveen P Kadle",
-    role: "Chief Financial Officer & Strategic Advisor",
+    role: "Investing Partner & Chief Business Advisor",
     experience: "20+ Years Leadership",
-    description: "Senior leader with over two decades in Finance leadership at Tata Group. Former Founding CFO of IBM-Tata joint venture, CFO of Tata Motors, Founding MD & CEO of Tata Capital, and Chairman of Tata AutoComp Systems. Expert in corporate finance and strategic planning.",
+    description: "Sri.Praveen Kadle is a senior leader with over two decades in Finance leadership at Tata Group. Former Founding CFO of IBM-Tata joint venture, CFO of Tata Motors, Founding MD & CEO of Tata Capital, and Chairman of Tata AutoComp Systems. Expert in corporate finance and strategic planning.",
     icon: StarIcon,
     expertise: ["Corporate Finance", "Strategic Planning", "Board Management", "M&A Expertise"]
   },
   {
     name: "Mr. Uday Gurkar",
-    role: "Chief Governance & Compliance Officer",
+    role: "C– Director & CFO ",
     experience: "28+ Years Experience",
-    description: "Seasoned finance and governance professional with 28+ years at multinationals including Crompton Greaves, Castrol, German Remedies. Fellow Member of ICAI (FCA) and Associate Member of ICSI (ACS). Expert in financial accounting, audits, budgeting, and corporate governance.",
+    description: "Sri.Uday Gurkar is a seasoned finance and governance professional with 28+ years at multinationals including Crompton Greaves, Castrol, German Remedies. Fellow Member of ICAI (FCA) and Associate Member of ICSI (ACS). Expert in financial accounting, audits, budgeting, and corporate governance.",
     icon: LightningBoltIcon,
     expertise: ["Corporate Governance", "Financial Audits", "Compliance Management", "Risk Assessment"]
   },
