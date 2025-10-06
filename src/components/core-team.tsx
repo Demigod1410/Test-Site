@@ -37,7 +37,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Uday Gurkar",
-    role: "C– Director & CFO ",
+    role: "Director & CFO ",
     experience: "28+ Years Experience",
     description: "Sri.Uday Gurkar is a seasoned finance and governance professional with 28+ years at multinationals including Crompton Greaves, Castrol, German Remedies. Fellow Member of ICAI (FCA) and Associate Member of ICSI (ACS). Expert in financial accounting, audits, budgeting, and corporate governance.",
     icon: LightningBoltIcon,

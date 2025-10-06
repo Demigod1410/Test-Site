@@ -59,7 +59,7 @@ export function HeroSection() {
   const [stats, setStats] = useState([
     { value: 0, target: 130, label: "Years Experience", suffix: "+" },
     { value: 0, target: 45, label: "Past Projects Delivered", suffix: "+" },
-    { value: 0, target: 73, label: "Countries together in EU, US &amp; Asia", suffix: "+" },
+    { value: 0, target: 73, label: "Countries together in EU, US & Asia", suffix: "+" },
   ]);
 
   // Animate the stats
