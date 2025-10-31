@@ -13,7 +13,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  GitHubLogoIcon,
   InstagramLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
