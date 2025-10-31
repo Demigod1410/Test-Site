@@ -149,12 +149,6 @@ export function FooterContactForm() {
                   <TwitterLogoIcon width={20} height={20} />
                 </Link>
                 <Link
-                  href="https://github.com/Demigod1410"
-                  className="bg-card/80 backdrop-blur-sm hover:bg-secondary/80 transition-colors p-2 rounded-full border border-primary/10"
-                >
-                  <GitHubLogoIcon width={20} height={20} />
-                </Link>
-                <Link
                   href="https://www.instagram.com/"
                   className="bg-card/80 backdrop-blur-sm hover:bg-secondary/80 transition-colors p-2 rounded-full border border-primary/10"
                 >
