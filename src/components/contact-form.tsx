@@ -1,6 +1,4 @@
 "use client";
-
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,28 +10,41 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   GitHubLogoIcon,
   InstagramLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
-import { Building, CheckCircle, Mail, Phone } from "lucide-react";
+import { Building, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(6, "Please enter a valid phone number").optional(),
-  company: z.string().min(2, "Company name must be at least 2 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  phone: z
+    .string()
+    .min(6, {
+      message: "Please enter a valid phone number.",
+    })
+    .optional(),
+  company: z.string().optional(),
+  message: z.string().min(10, {
+    message: "Message must be at least 10 characters.",
+  }),
 });
 
 export function FooterContactForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,11 +57,46 @@ export function FooterContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real app, you would handle the form submission here
-    console.log(values);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      // Use Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "2a4308eb-53dd-4e8b-bbcf-9e0fd52db8ff",
+          name: values.name,
+          email: values.email,
+          phone: values.phone || "Not provided",
+          company: values.company || "Not provided",
+          message: values.message,
+          subject: "New Contact Form Submission from 713 Cybersecurity Website",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        throw new Error(data.message || "Failed to send message");
+      }
+    } catch {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
   return (
     <section id="contact" className="dark relative h-fit overflow-hidden bg-background backdrop-blur-3xl text-foreground w-full">
@@ -154,128 +200,114 @@ export function FooterContactForm() {
               Send us a message
             </h3>
 
-            {isSubmitted ? (
-              <Alert className="bg-green-900/50 border-green-600 text-white">
-                <CheckCircle className="h-4 w-4" />
-                <AlertTitle>Thank you!</AlertTitle>
-                <AlertDescription>
-                  Your message has been sent successfully. We&apos;ll get back
-                  to you within 24 hours.
-                </AlertDescription>
-              </Alert>
-            ) : (
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-4"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-300">Name</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Your name"
-                              {...field}
-                              className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-300">
-                            Email
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="you@company.com"
-                              type="email"
-                              {...field}
-                              className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-300">
-                            Phone Number
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Your phone number"
-                              type="tel"
-                              {...field}
-                              className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="company"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-300">
-                            Company
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Your company"
-                              {...field}
-                              className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
-                    name="message"
+                    name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-slate-300">
-                          Message
-                        </FormLabel>
+                        <FormLabel className="text-slate-300">Name</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="Tell us about your needs..."
-                            className="min-h-[100px] bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                          <Input
+                            placeholder="Your name"
                             {...field}
+                            className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
                           />
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" variant="secondary" className="w-full">
-                    Send Message
-                  </Button>
-                </form>
-              </Form>
-            )}
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-300">
+                          Email
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="you@company.com"
+                            type="email"
+                            {...field}
+                            className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-300">
+                          Phone Number
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your phone number"
+                            type="tel"
+                            {...field}
+                            className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-300">
+                          Company
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your company"
+                            {...field}
+                            className="bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-slate-300">
+                        Message
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Tell us about your needs..."
+                          className="min-h-[100px] bg-card/80 backdrop-blur-sm border-primary/10 focus-visible:ring-secondary"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-400" />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" disabled={isSubmitting} className="w-full">
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
         <footer className="w-full bg-background/80 backdrop-blur-xl mt-auto border-t border-primary/10">

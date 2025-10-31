@@ -121,3 +121,91 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Safari-specific fixes for rendering consistency */
+@supports (-webkit-touch-callout: none) {
+  /* Fix backdrop-filter issues in Safari */
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl {
+    -webkit-backdrop-filter: blur(var(--tw-backdrop-blur));
+    backdrop-filter: blur(var(--tw-backdrop-blur));
+  }
+
+  /* Fix gradient text rendering in Safari */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Fix transform issues in Safari */
+  * {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Fix flexbox issues in Safari */
+  .flex,
+  .inline-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+  }
+
+  /* Fix grid issues in Safari */
+  .grid {
+    display: -ms-grid;
+    display: grid;
+  }
+
+  /* Smooth scrolling for Safari */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix input styling in Safari */
+  input,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* Fix button styling in Safari */
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Additional cross-browser fixes */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure consistent image rendering */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Fix SVG rendering issues */
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure animations work consistently */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
