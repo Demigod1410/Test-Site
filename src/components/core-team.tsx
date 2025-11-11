@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: "Mr. Praveen P Kadle",
     role: "Investing Partner & Chief Business Advisor",
-    experience: "20+ Years Leadership",
+    experience: "30+ Years Leadership",
     description: "Sri.Praveen Kadle is a senior leader with over two decades in Finance leadership at Tata Group. Former Founding CFO of IBM-Tata joint venture, CFO of Tata Motors, Founding MD & CEO of Tata Capital, and Chairman of Tata AutoComp Systems. Expert in corporate finance and strategic planning.",
     icon: StarIcon,
     expertise: ["Corporate Finance", "Strategic Planning", "Board Management", "M&A Expertise"]
