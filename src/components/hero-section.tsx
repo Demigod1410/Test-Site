@@ -57,7 +57,6 @@ export function HeroSection() {
 
   // Stats for the animated counter
   const [stats, setStats] = useState([
-    { value: 0, target: 130, label: "Years Experience", suffix: "+" },
     { value: 0, target: 45, label: "Past Projects Delivered", suffix: "+" },
     { value: 0, target: 73, label: "Countries together in EU, US & Asia", suffix: "+" },
   ]);
@@ -112,7 +111,7 @@ export function HeroSection() {
 
 
           {/* Stats section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 w-full max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 w-full max-w-2xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
