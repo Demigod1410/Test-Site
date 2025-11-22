@@ -105,7 +105,7 @@ export function HeroSection() {
               Trust, Excellence, Innovation in Cybersecurity
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              713 Cybersecurity delivers impactful cybersecurity solutions powered by 130+ man-years of industry expertise, qualitative research, and deep domain knowledge to solve complex business challenges.
+              713 Cybersecurity delivers impactful cybersecurity solutions powered by industry expertise, qualitative research, and deep domain knowledge to solve complex business challenges.
             </p>
           </div>
 
